@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Parallel AI - UZXANLU Edition</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div id="splash">
+        <h1 class="splash-logo">PARALLEL</h1>
+    </div>
+
+    <div id="auth-screen" class="container">
+        <div class="top-brand-area">
+            <a href="about.html" class="dev-box-3d">
+                <span class="dev-title">UZXANLU</span>
+                <span class="dev-label">Developer</span>
+            </a>
+        </div>
+
+        <div class="glass-box-3d">
+            <div class="content-header">
+                <h2>Kirish</h2>
+                <p>Parallel dunyoga yo'l</p>
+            </div>
+            <div class="inputs-container">
+                <input type="text" id="user-name" placeholder="Ismingiz" class="glass-input">
+                <input type="number" id="user-age" placeholder="Yoshingiz" class="glass-input">
+            </div>
+            <button id="start-btn" class="glow-btn">BOSHLASH</button>
+        </div>
+    </div>
+
+    <div id="chat-screen" class="chat-container hidden">
+        <header class="chat-head">
+            <div class="header-left">
+                <button id="back-to-auth" class="back-btn">←</button>
+                <div class="user-meta">
+                    <div class="ring-avatar">
+                        <img id="avatar-img" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
+                    </div>
+                    <div class="user-text">
+                        <h3 id="display-name">...</h3>
+                        <span class="status-blink">● Online</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="chat-content"></main>
+        <div id="typing" class="hidden">Aksingiz o'ylamoqda...</div>
+        <footer class="chat-footer">
+            <input type="text" id="user-msg" placeholder="Xabar yozing..." autocomplete="off">
+            <button id="send-btn">➤</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
